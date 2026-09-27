@@ -3,47 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Luiz Appelt — Portfólio acadêmico e profissional
-        Atitus educação, ciências da computação, front end, quality assurance, projetos em python e java
-        curriculo, linkedin, github, vaga tecnologia, oportunidades, estudante, desenvolvedor, aprendiz, tecnologia, inovação
-        aprendiz continuo, criatividade, organização, comunicação, foco em resultados
-        luiz henrique appelt weller, luiz appelt, luiz henrique, appelt weller, appelt, weller
-    </title>
+    <meta name="robots" content="index, follow">
 
-    <!-- Fontes -->
-    <!--kode mono-->
+    <!-- SEO Primário -->
+    <title>Luiz Appelt — Desenvolvedor de Software & Ciência da Computação</title>
+    <meta name="title" content="Luiz Appelt — Desenvolvedor de Software & Ciência da Computação">
+    <meta name="description" content="Portfólio de Luiz Henrique Appelt Weller. Acadêmico de Ciência da Computação na ATITUS Educação, desenvolvedor com foco em TypeScript, React, Python, Java e QA.">
+    <meta name="author" content="Luiz Henrique Appelt Weller">
+    <link rel="canonical" href="https://luizappelt.github.io/">
+
+    <!-- Favicon SVG Moderno -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='24' fill='%23FA003F'/><text x='50%' y='55%' text-anchor='middle' dominant-baseline='middle' fill='%23ffffff' font-family='sans-serif' font-weight='800' font-size='42'>LA</text></svg>">
+
+    <!-- Open Graph / Redes Sociais -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://luizappelt.github.io/">
+    <meta property="og:title" content="Luiz Appelt — Desenvolvedor de Software & Ciência da Computação">
+    <meta property="og:description" content="Portfólio acadêmico e profissional de Luiz Appelt. Projetos práticos em TypeScript, React, Python e Java.">
+    <meta property="og:image" content="https://luizappelt.github.io/foto.jpg">
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://luizappelt.github.io/">
+    <meta name="twitter:title" content="Luiz Appelt — Desenvolvedor de Software & Ciência da Computação">
+    <meta name="twitter:description" content="Portfólio acadêmico e profissional de Luiz Appelt. Projetos práticos em TypeScript, React, Python e Java.">
+    <meta name="twitter:image" content="https://luizappelt.github.io/foto.jpg">
+
+    <!-- Dados Estruturados Schema.org (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Luiz Henrique Appelt Weller",
+      "alternateName": "Luiz Appelt",
+      "url": "https://luizappelt.github.io/",
+      "image": "https://luizappelt.github.io/foto.jpg",
+      "jobTitle": "Desenvolvedor de Software",
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": "ATITUS Educação"
+      },
+      "knowsAbout": ["TypeScript", "React", "Python", "Java", "HTML5", "CSS3", "SQL", "Git", "Quality Assurance", "Data Structures"],
+      "sameAs": [
+        "https://github.com/LuizAppelt",
+        "https://www.linkedin.com/in/luiz-appelt/"
+      ]
+    }
+    </script>
+
+    <!-- Fontes Google (Syne para títulos, Kode Mono e Space Mono para detalhes técnicos) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!--<link href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@700&display=swap" rel="stylesheet">
-    <!-- space mono e syne -->
-    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
-    <!-- Ícones das ferramentas -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
     
+    <!-- Ícones FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    <!-- EmailJS SDK -->
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    
+    <!-- EmailJS SDK com defer -->
+    <script defer src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 </head>
 <body>
 
-    <!-- Fundo estrelado -->
+    <!-- Textura de estrelas discreta -->
     <canvas id="fundo-estrelado"></canvas>
-
-    <!-- Filtro SVG para efeito glass -->
-    <svg width="0" height="0" style="position:absolute;">
-        <defs>
-            <filter id="glass-distortion" x="0%" y="0%" width="100%" height="100%">
-                <feTurbulence type="fractalNoise" baseFrequency="0.012 0.012" numOctaves="2" seed="92" result="noise"/>
-                <feGaussianBlur in="noise" stdDeviation="2" result="blurred"/>
-                <feDisplacementMap in="SourceGraphic" in2="blurred" scale="85" xChannelSelector="R" yChannelSelector="G"/>
-            </filter>
-        </defs>
-    </svg>
 
     <!-- ── NAVEGAÇÃO ── -->
     <nav>
-        <span class="nav-logo-kode">&lt;Appelt.dev /&gt;</span>
+        <a href="#hero" class="nav-logo-kode">&lt;Appelt.dev /&gt;</a>
         <ul class="nav-links">
             <li><a href="#sobre">Sobre</a></li>
             <li><a href="#projetos">Projetos</a></li>
@@ -57,63 +84,61 @@
         <!-- ── HERO ── -->
         <section id="hero">
             <div class="hero-content">
-                <span class="hero-tag">✦ disponível para oportunidades</span>
+                <span class="hero-tag">✦ Ciência da Computação · ATITUS</span>
                 <h1 class="hero-name">Luiz Henrique Appelt Weller</h1>
-                <p class="hero-sub">&lt;/Acadêmico em Ciências da Computação&gt;</p>
+                <p class="hero-sub">&lt;Desenvolvedor de Software /&gt;</p>
                 <div class="hero-socials">
-                    <a href="https://github.com/luizappelt" class="social-btn" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-                    <a href="https://www.linkedin.com/in/luizappelt/" class="social-btn" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
-                    <a href="https://www.instagram.com/luiz.appelt?igsh=MWVyb3RzaGdyMnFwcQ%3D%3D&utm_source=qr" class="social-btn" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+                    <a href="curriculo.pdf" download="Curriculo_Luiz_Henrique_Appelt_Weller.pdf" class="social-btn primary-btn" target="_blank">
+                        <i class="fas fa-file-arrow-down"></i> Baixar Currículo
+                    </a>
+                    <a href="https://github.com/LuizAppelt" class="social-btn" target="_blank">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                    <a href="https://www.linkedin.com/in/luiz-appelt/" class="social-btn" target="_blank">
+                        <i class="fab fa-linkedin"></i> LinkedIn
+                    </a>
                 </div>
-                <p class="scroll-hint">↓ &nbsp; scroll</p>
+                <p class="scroll-hint">&nbsp;...</p>
             </div>
         </section>
 
         <!-- ── SOBRE MIM ── -->
         <section id="sobre">
             <div class="section-inner">
-                <p class="section-label fade-in">// 01 — sobre mim </p>
+                <p class="section-label fade-in">// 01 — sobre mim</p>
                 <h2 class="section-title fade-in">Quem sou eu</h2>
 
                 <div class="glass-card fade-in">
                     <div class="sobre-grid">
                         <div class="foto-wrapper">
                             <div class="foto-circle">
-                                
-                                <img src="foto.jpg" alt="Foto de Luiz">
-                               
+                                <img src="foto.jpg" alt="Foto de perfil de Luiz Henrique Appelt Weller" width="180" height="180">
                             </div>
                             <div class="badges">
-                                <span class="badge">Front end</span>
-                                <span class="badge">QA</span>
                                 <span class="badge">Full-stack</span>
-                                <span class="badge">Web</span>
-        
+                                <span class="badge">QA</span>
+                                <span class="badge">Back-end</span>
+                                <span class="badge">Front-end</span>
                             </div>
                         </div>
 
                         <div class="sobre-texto">
                             <p>
-                                Olá! Sou <strong>Luiz Appelt</strong>, estudante de
-                                <strong>Ciências da Computação</strong> na ATITUS Educação.
-                                
-                                
+                                Olá! Sou <strong>Luiz Appelt</strong>, graduando em
+                                <strong>Ciência da Computação</strong> na <strong>Universidade ATITUS</strong> (Campus Passo Fundo/RS), com previsão de formação em 2029.
                             </p>
                             <p>
-                                Meu objetivo é atuar como desenvolvedor <strong>Full-stack</strong>, unindo meu fascínio pela criação de interfaces com a garantia de que o software funcione com excelência.
-                                 Trago para meus códigos um perfil altamente organizado, comunicativo e voltado para a entrega de resultados.
+                                Tenho sólida base em lógica de programação, <strong>estruturas de dados</strong> (listas encadeadas, filas e pilhas), <strong>programação orientada a objetos (POO)</strong> e qualidade de software. Na prática, desenvolvo aplicações modernas unindo <strong>TypeScript, React 19, Python e Java</strong> com persistência em bancos de dados (PostgreSQL/Supabase) e consumo de APIs REST.
                             </p>
                             <p>
-                                Desenvolvo projetos práticos em <strong>Python</strong>,
-                                <strong>Java</strong> e atualmente focando em <strong>Web</strong>, consolidando minha base técnica enquanto
-                                exploro as áreas que mais me fascinam na tecnologia.
+                                Possuo vivência profissional em suporte a sistemas ERP, controle de dados e garantia de conformidade técnica. Busco oportunidades de <strong>Estágio / Júnior</strong> para somar na entrega de soluções escaláveis, organizadas e com alto rigor de qualidade.
                             </p>
                             <div class="badges">
-                                <span class="badge">Criatividade</span>
-                                <span class="badge">Organização</span>
-                                <span class="badge">Comunicação</span>
-                                <span class="badge">Foco em resultados</span>
-                                <span class="badge">Aprendizado contínuo</span>
+                                <span class="badge">Estruturas de Dados</span>
+                                <span class="badge">POO Avançado</span>
+                                <span class="badge">TypeScript & React</span>
+                                <span class="badge">Python & Java</span>
+                                <span class="badge">Clean Code & Testes</span>
                             </div>
                         </div>
                     </div>
@@ -129,35 +154,73 @@
 
                 <div class="projetos-grid">
 
+                    <!-- Projeto 1: meFolio (React/TypeScript/Supabase) -->
                     <div class="glass-card projeto-card fade-in">
-                        <span class="projeto-lang">
-                            <span class="lang-dot python"></span>Python
-                        </span>
-                        <h3 class="projeto-titulo">Projeto Estoque em Python</h3>
-                        <p class="projeto-desc">
-                            Este projeto implementa um mini sistema de gerenciamento de estoque e vendas em Python, 
-                            totalmente executado via terminal, 
-                            com persistência automática de dados em arquivos .csv ou .txt.
-                        </p>
-                        <a href="https://github.com/LuizAppelt/Estrutura_de_Dados_com_Python" class="projeto-btn" target="_blank"><i class="fab fa-github"></i> Ver no GitHub</a>
+                        <div>
+                            <span class="projeto-lang">
+                                <span class="lang-dot web"></span>TypeScript & React 19
+                            </span>
+                            <h3 class="projeto-titulo">meFolio — Plataforma de Links & Grid</h3>
+                            <p class="projeto-desc">
+                                Aplicação web interativa no padrão Bento Grid para personalização de portfólios. Integração dinâmica com a API do GitHub para importação de repositórios, persistência e auth via Supabase, player de áudio e estúdio de temas acessíveis.
+                            </p>
+                            <div class="projeto-tags">
+                                <span class="projeto-tag">React 19</span>
+                                <span class="projeto-tag">TypeScript</span>
+                                <span class="projeto-tag">Tailwind CSS</span>
+                                <span class="projeto-tag">Supabase</span>
+                                <span class="projeto-tag">GitHub API</span>
+                            </div>
+                        </div>
+                        <a href="https://github.com/LuizAppelt/meFolio" class="projeto-btn" target="_blank">
+                            <i class="fab fa-github"></i> Ver no GitHub
+                        </a>
                     </div>
 
+                    <!-- Projeto 2: Estoque e Vendas (Python/Estruturas de Dados) -->
                     <div class="glass-card projeto-card fade-in">
-                        <span class="projeto-lang" style="color:#f97316;">
-                            <span class="lang-dot java"></span>Java
-                        </span>
-                        <h3 class="projeto-titulo">Projeto biblioteca em Java</h3>
-                        <p class="projeto-desc">
-                            Este projeto é um sistema de gerenciamento de biblioteca em Java, 
-                            operando via terminal, com funcionalidades para cadastro de livros, 
-                            empréstimos e devoluções, utilizando arquivos para persistência de dados.
-                        </p>
-                        <a href="https://github.com/LuizAppelt/Biblioteca-java" class="projeto-btn" target="_blank"><i class="fab fa-github"></i> Ver no GitHub</a>
+                        <div>
+                            <span class="projeto-lang">
+                                <span class="lang-dot python"></span>Python & Estruturas de Dados
+                            </span>
+                            <h3 class="projeto-titulo">Gestão de Estoque e Vendas</h3>
+                            <p class="projeto-desc">
+                                Sistema modular em Python aplicando estruturas de dados implementadas do zero: Lista Encadeada para cadastros, Fila FIFO para fluxo de pedidos e Pilha LIFO para histórico de desfazer (undo), com validação rigorosa e persistência em arquivos.
+                            </p>
+                            <div class="projeto-tags">
+                                <span class="projeto-tag">Python</span>
+                                <span class="projeto-tag">Listas Encadeadas</span>
+                                <span class="projeto-tag">Filas & Pilhas</span>
+                                <span class="projeto-tag">Persistência</span>
+                                <span class="projeto-tag">CLI</span>
+                            </div>
+                        </div>
+                        <a href="https://github.com/LuizAppelt/Estrutura_de_Dados_com_Python" class="projeto-btn" target="_blank">
+                            <i class="fab fa-github"></i> Ver no GitHub
+                        </a>
                     </div>
 
-                    <div class="glass-card projeto-card placeholder fade-in">
-                        <span class="placeholder-icon">＋</span>
-                        <p style="font-size:0.85rem; color:var(--muted);">Próximo projeto em breve</p>
+                    <!-- Projeto 3: Zoo Digital (Java 26/POO Avançado) -->
+                    <div class="glass-card projeto-card fade-in">
+                        <div>
+                            <span class="projeto-lang">
+                                <span class="lang-dot java"></span>Java 26 & POO
+                            </span>
+                            <h3 class="projeto-titulo">Zoo Digital — Gestão em CLI</h3>
+                            <p class="projeto-desc">
+                                Aplicação desenvolvida em Java explorando conceitos avançados de POO: polimorfismo, interfaces desacopladas e Pattern Matching com instanceof. Conta com persistência binária local serializada e rotinas de validação preventiva contra duplicidade.
+                            </p>
+                            <div class="projeto-tags">
+                                <span class="projeto-tag">Java 26</span>
+                                <span class="projeto-tag">Maven</span>
+                                <span class="projeto-tag">Polimorfismo</span>
+                                <span class="projeto-tag">Serialização</span>
+                                <span class="projeto-tag">Clean Code</span>
+                            </div>
+                        </div>
+                        <a href="https://github.com/LuizAppelt/Zoo-Digital" class="projeto-btn" target="_blank">
+                            <i class="fab fa-github"></i> Ver no GitHub
+                        </a>
                     </div>
 
                 </div>
@@ -168,84 +231,70 @@
         <section id="tecnologias">
             <div class="section-inner">
                 <p class="section-label fade-in">// 03 — tecnologias</p>
-                <h2 class="section-title fade-in">Ferramentas que utilizo</h2>
+                <h2 class="section-title fade-in">Ferramentas & Competências</h2>
 
-                <div class="glass-card tech-container fade-in">
-                    <div class="tech-track-wrapper">
-                        <div class="tech-track">
+                <div class="glass-card tech-card fade-in">
+                    <div class="tech-categories">
 
-                            <div class="tech-item">
-                                <svg class="tech-svg" viewBox="0 0 128 128"><path fill="#0074BD" d="M47.617 98.12s-4.767 2.774 3.397 3.71c9.892 1.13 14.947.968 25.845-1.092 0 0 2.871 1.795 6.873 3.351-24.439 10.47-55.308-.607-36.115-5.969zm-2.988-13.665s-5.348 3.959 2.823 4.805c10.567 1.091 18.91 1.18 33.354-1.6 0 0 1.993 2.025 5.132 3.131-29.542 8.64-62.446.68-41.309-6.336z"/><path fill="#EA2D2E" d="M69.802 61.271c6.025 6.935-1.58 13.17-1.58 13.17s15.289-7.891 8.269-17.777c-6.559-9.215-11.587-13.792 15.635-29.58 0 .001-42.731 10.67-22.324 34.187z"/><path fill="#0074BD" d="M49.912 70.294s-22.686 5.389-8.033 7.348c6.188.828 18.518.638 30.011-.326 9.39-.789 18.813-2.474 18.813-2.474s-3.308 1.419-5.704 3.053c-23.042 6.061-67.544 3.238-54.731-2.958 10.832-5.239 19.644-4.643 19.644-4.643z"/><path fill="#EA2D2E" d="M76.491 1.587S89.459 14.563 64.188 34.51c-20.266 16.006-4.621 25.13-.007 35.559-11.831-10.673-20.509-20.07-14.688-28.815C58.041 28.42 81.722 22.195 76.491 1.587z"/></svg>
-                                <span class="tech-name">Java</span>
+                        <!-- Categoria 1: Linguagens -->
+                        <div class="tech-category">
+                            <div class="tech-category-title">
+                                <i class="fas fa-code"></i> Linguagens
                             </div>
-
-                            <div class="tech-item">
-                                <svg class="tech-svg" viewBox="0 0 128 128"><linearGradient id="pya" x1="70.252" y1="1237.476" x2="170.659" y2="1151.089" gradientUnits="userSpaceOnUse" gradientTransform="matrix(.563 0 0 .568 -29.53 -701.059)"><stop offset="0" stop-color="#5A9FD4"/><stop offset="1" stop-color="#306998"/></linearGradient><linearGradient id="pyb" x1="209.474" y1="1098.811" x2="173.62" y2="1149.537" gradientUnits="userSpaceOnUse" gradientTransform="matrix(.563 0 0 .568 -29.53 -701.059)"><stop offset="0" stop-color="#FFD43B"/><stop offset="1" stop-color="#FFE873"/></linearGradient><path fill="url(#pya)" d="M63.391 1.988c-4.222.02-8.252.379-11.8 1.007-10.45 1.846-12.346 5.71-12.346 12.837v9.411h24.693v3.137H29.977c-7.176 0-13.46 4.313-15.426 12.521-2.268 9.405-2.368 15.275 0 25.096 1.755 7.311 5.947 12.519 13.124 12.519h8.491V67.234c0-8.151 7.051-15.34 15.426-15.34h24.665c6.866 0 12.346-5.654 12.346-12.548V15.833c0-6.693-5.646-11.72-12.346-12.837-4.244-.706-8.645-1.027-12.866-1.008zM50.037 9.557c2.55 0 4.634 2.117 4.634 4.721 0 2.593-2.083 4.69-4.634 4.69-2.56 0-4.633-2.097-4.633-4.69-.001-2.604 2.073-4.721 4.633-4.721z"/><path fill="url(#pyb)" d="M91.682 28.38v10.966c0 8.5-7.208 15.655-15.426 15.655H51.591c-6.756 0-12.346 5.783-12.346 12.549v23.515c0 6.691 5.818 10.628 12.346 12.547 7.816 2.297 15.312 2.713 24.665 0 6.216-1.801 12.346-5.423 12.346-12.547v-9.412H63.938v-3.138h37.012c7.176 0 9.852-5.005 12.348-12.519 2.578-7.735 2.467-15.174 0-25.096-1.774-7.145-5.161-12.521-12.348-12.521h-9.268zM77.809 87.927c2.561 0 4.634 2.097 4.634 4.692 0 2.602-2.074 4.719-4.634 4.719-2.55 0-4.633-2.117-4.633-4.719 0-2.595 2.083-4.692 4.633-4.692z"/></svg>
-                                <span class="tech-name">Python</span>
+                            <div class="tech-items-grid">
+                                <div class="tech-badge"><i class="fab fa-js-square" style="color:#f7df1e;"></i> TypeScript / JS</div>
+                                <div class="tech-badge"><i class="fab fa-python" style="color:#38bdf8;"></i> Python</div>
+                                <div class="tech-badge"><i class="fab fa-java" style="color:#fb923c;"></i> Java</div>
+                                <div class="tech-badge"><i class="fas fa-database" style="color:#336791;"></i> SQL</div>
                             </div>
-
-                            <div class="tech-item">
-                                <svg class="tech-svg" viewBox="0 0 128 128"><path fill="#F0DB4F" d="M1.408 1.408h125.184v125.185H1.408z"/><path fill="#323330" d="M116.347 96.736c-.917-5.711-4.641-10.508-15.672-14.981-3.832-1.761-8.104-3.022-9.377-5.926-.452-1.69-.512-2.642-.226-3.665.821-3.32 4.784-4.355 7.925-3.403 2.023.678 3.938 2.237 5.093 4.724 5.402-3.498 5.391-3.475 9.163-5.879-1.381-2.141-2.118-3.129-3.022-4.045-3.249-3.629-7.676-5.498-14.756-5.355l-3.688.477c-3.534.893-6.902 2.748-8.877 5.235-5.926 6.724-4.236 18.492 2.975 23.335 7.104 5.332 17.54 6.545 18.873 11.531 1.297 6.104-4.486 8.08-10.234 7.378-4.236-.881-6.592-3.034-9.139-6.949-4.688 2.713-4.688 2.713-9.508 5.485 1.143 2.499 2.344 3.63 4.26 5.795 9.068 9.198 31.76 8.746 35.83-5.176.165-.478 1.261-3.666.38-8.581zM69.462 58.943H57.753l-.048 30.272c0 6.438.333 12.34-.714 14.149-1.713 3.558-6.152 3.117-8.175 2.427-2.059-1.012-3.106-2.451-4.319-4.485-.333-.584-.583-1.036-.667-1.071l-9.52 5.83c1.583 3.249 3.915 6.069 6.902 7.901 4.462 2.678 10.459 3.499 16.731 2.059 4.082-1.189 7.604-3.652 9.448-7.401 2.666-4.915 2.094-10.864 2.07-17.444.06-10.735.001-21.468.001-32.237z"/></svg>
-                                <span class="tech-name">JavaScript</span>
-                            </div>
-
-                            <div class="tech-item">
-                                <svg class="tech-svg" viewBox="0 0 128 128"><path fill="#E44D26" d="M19.037 113.876L9.032 1.661h109.936l-10.016 112.198-45.019 12.48z"/><path fill="#F16529" d="M64 116.8l36.378-10.086 8.559-95.878H64z"/><path fill="#EBEBEB" d="M64 52.455H45.788L44.53 38.361H64V24.599H29.489l.33 3.692 3.382 37.927H64zm0 35.743l-.061.017-15.327-4.14-.979-10.975H33.816l1.928 21.609 28.193 7.826.063-.017z"/><path fill="#fff" d="M63.952 52.455v13.763h16.947l-1.597 17.849-15.35 4.143v14.319l28.215-7.82.207-2.325 3.234-36.233.335-3.696h-3.708zm0-27.856v13.762h33.244l.276-3.092.628-6.978.329-3.692z"/></svg>
-                                <span class="tech-name">HTML5</span>
-                            </div>
-
-                            <div class="tech-item">
-                                <svg class="tech-svg" viewBox="0 0 128 128"><path fill="#1572B6" d="M18.814 114.123L8.76 1.352h110.48l-10.064 112.754-45.243 12.543-45.119-12.526z"/><path fill="#33A9DC" d="M64.001 117.062l36.559-10.136 8.601-96.354H64.001v106.49z"/><path fill="#fff" d="M64.001 51.429h18.302l1.264-14.163H64.001V23.435h34.682l-.332 3.711-3.4 38.114h-30.95V51.429z"/><path fill="#EBEBEB" d="M64.083 87.349l-.061.018-15.403-4.159-.985-11.031H33.752l1.937 21.717 28.331 7.863.063-.018v-14.39z"/><path fill="#fff" d="M81.127 64.675l-1.666 18.522-15.426 4.164v14.39l28.354-7.858.208-2.337 2.406-26.881H81.127z"/><path fill="#EBEBEB" d="M64.048 23.435v13.831H30.512l-.277-3.108-.63-7.044-.331-3.679h34.774zm-.047 27.994v13.831H45.666l-.277-3.108-.631-7.044-.33-3.679h19.573z"/></svg>
-                                <span class="tech-name">CSS3</span>
-                            </div>
-
-                            <div class="tech-item">
-                                <svg class="tech-svg" viewBox="0 0 128 128"><path fill="#336791" d="M93.809 92.112c.785-6.533.55-7.492 5.416-6.433l1.235.108c3.742.17 8.637-.602 11.513-1.938 6.191-2.873 9.861-7.668 3.758-6.409-13.924 2.873-14.881-1.842-14.881-1.842 14.703-21.815 20.849-49.508 15.543-56.287C101.696 6.764 78.163.279 78.163.279l-.06.16C75.459.19 72.535.003 69.467.003 62.73.003 57.41 1.67 53.436 4.565c-1.14-.255-2.305-.48-3.515-.663C37.748 1.938 26.033 8.26 16.983 19.468 0 40.06 4.289 72.572 22.536 88.862c5.154 4.488 10.955 6.88 15.989 7.14.6 1.977 1.252 3.68 1.896 4.917l.13.255.17-.08c1.456 2.844 2.82 4.307 4.265 4.307.576 0 1.153-.16 1.73-.496.516-.296 1.01-.63 1.47-1.004.63 3.374 1.59 6.35 2.943 8.676-4.66 1.6-8.082 5.003-8.082 5.003s10.82 6.967 27.47 3.115c4.03-.958 8.3-2.518 12.34-4.665z"/></svg>
-                                <span class="tech-name">SQL</span>
-                            </div>
-
-                            <div class="tech-item">
-                                <svg class="tech-svg" viewBox="0 0 128 128"><path fill="#fff" d="M64 5.103c-33.347 0-60.388 27.035-60.388 60.388 0 26.682 17.303 49.317 41.297 57.303 3.017.56 4.125-1.31 4.125-2.905 0-1.44-.056-6.197-.082-11.243-16.8 3.653-20.345-7.125-20.345-7.125-2.747-6.98-6.705-8.836-6.705-8.836-5.48-3.748.413-3.67.413-3.67 6.063.425 9.257 6.223 9.257 6.223 5.386 9.23 14.127 6.562 17.573 5.02.542-3.903 2.107-6.568 3.834-8.076-13.413-1.525-27.514-6.704-27.514-29.843 0-6.593 2.36-11.98 6.223-16.21-.628-1.52-2.695-7.662.584-15.98 0 0 5.07-1.623 16.61 6.19C53.7 35 58.867 34.327 64 34.304c5.13.023 10.3.694 15.127 2.033 11.526-7.813 16.59-6.19 16.59-6.19 3.287 8.317 1.22 14.46.593 15.98 3.872 4.23 6.215 9.617 6.215 16.21 0 23.194-14.127 28.3-27.574 29.796 2.167 1.874 4.097 5.55 4.097 11.183 0 8.08-.07 14.583-.07 16.572 0 1.607 1.088 3.49 4.148 2.897 23.98-7.994 41.263-30.622 41.263-57.294C124.388 32.14 97.35 5.104 64 5.104z"/></svg>
-                                <span class="tech-name">GitHub</span>
-                            </div>
-
-                            <!-- Duplicatas para loop contínuo -->
-                            <div class="tech-item">
-                                <svg class="tech-svg" viewBox="0 0 128 128"><path fill="#0074BD" d="M47.617 98.12s-4.767 2.774 3.397 3.71c9.892 1.13 14.947.968 25.845-1.092 0 0 2.871 1.795 6.873 3.351-24.439 10.47-55.308-.607-36.115-5.969zm-2.988-13.665s-5.348 3.959 2.823 4.805c10.567 1.091 18.91 1.18 33.354-1.6 0 0 1.993 2.025 5.132 3.131-29.542 8.64-62.446.68-41.309-6.336z"/><path fill="#EA2D2E" d="M69.802 61.271c6.025 6.935-1.58 13.17-1.58 13.17s15.289-7.891 8.269-17.777c-6.559-9.215-11.587-13.792 15.635-29.58 0 .001-42.731 10.67-22.324 34.187z"/><path fill="#EA2D2E" d="M76.491 1.587S89.459 14.563 64.188 34.51c-20.266 16.006-4.621 25.13-.007 35.559-11.831-10.673-20.509-20.07-14.688-28.815C58.041 28.42 81.722 22.195 76.491 1.587z"/></svg>
-                                <span class="tech-name">Java</span>
-                            </div>
-                            <div class="tech-item">
-                                <svg class="tech-svg" viewBox="0 0 128 128"><linearGradient id="pyc" x1="70.252" y1="1237.476" x2="170.659" y2="1151.089" gradientUnits="userSpaceOnUse" gradientTransform="matrix(.563 0 0 .568 -29.53 -701.059)"><stop offset="0" stop-color="#5A9FD4"/><stop offset="1" stop-color="#306998"/></linearGradient><linearGradient id="pyd" x1="209.474" y1="1098.811" x2="173.62" y2="1149.537" gradientUnits="userSpaceOnUse" gradientTransform="matrix(.563 0 0 .568 -29.53 -701.059)"><stop offset="0" stop-color="#FFD43B"/><stop offset="1" stop-color="#FFE873"/></linearGradient><path fill="url(#pyc)" d="M63.391 1.988c-4.222.02-8.252.379-11.8 1.007-10.45 1.846-12.346 5.71-12.346 12.837v9.411h24.693v3.137H29.977c-7.176 0-13.46 4.313-15.426 12.521-2.268 9.405-2.368 15.275 0 25.096 1.755 7.311 5.947 12.519 13.124 12.519h8.491V67.234c0-8.151 7.051-15.34 15.426-15.34h24.665c6.866 0 12.346-5.654 12.346-12.548V15.833c0-6.693-5.646-11.72-12.346-12.837-4.244-.706-8.645-1.027-12.866-1.008zM50.037 9.557c2.55 0 4.634 2.117 4.634 4.721 0 2.593-2.083 4.69-4.634 4.69-2.56 0-4.633-2.097-4.633-4.69-.001-2.604 2.073-4.721 4.633-4.721z"/><path fill="url(#pyd)" d="M91.682 28.38v10.966c0 8.5-7.208 15.655-15.426 15.655H51.591c-6.756 0-12.346 5.783-12.346 12.549v23.515c0 6.691 5.818 10.628 12.346 12.547 7.816 2.297 15.312 2.713 24.665 0 6.216-1.801 12.346-5.423 12.346-12.547v-9.412H63.938v-3.138h37.012c7.176 0 9.852-5.005 12.348-12.519 2.578-7.735 2.467-15.174 0-25.096-1.774-7.145-5.161-12.521-12.348-12.521h-9.268zM77.809 87.927c2.561 0 4.634 2.097 4.634 4.692 0 2.602-2.074 4.719-4.634 4.719-2.55 0-4.633-2.117-4.633-4.719 0-2.595 2.083-4.692 4.633-4.692z"/></svg>
-                                <span class="tech-name">Python</span>
-                            </div>
-                            <div class="tech-item">
-                                <svg class="tech-svg" viewBox="0 0 128 128"><path fill="#F0DB4F" d="M1.408 1.408h125.184v125.185H1.408z"/><path fill="#323330" d="M69.462 58.943H57.753l-.048 30.272c0 6.438.333 12.34-.714 14.149-1.713 3.558-6.152 3.117-8.175 2.427-2.059-1.012-3.106-2.451-4.319-4.485l-9.52 5.83c1.583 3.249 3.915 6.069 6.902 7.901 4.462 2.678 10.459 3.499 16.731 2.059 4.082-1.189 7.604-3.652 9.448-7.401 2.666-4.915 2.094-10.864 2.07-17.444.06-10.735.001-21.468.001-32.237z"/></svg>
-                                <span class="tech-name">JavaScript</span>
-                            </div>
-                            <div class="tech-item">
-                                <svg class="tech-svg" viewBox="0 0 128 128"><path fill="#E44D26" d="M19.037 113.876L9.032 1.661h109.936l-10.016 112.198-45.019 12.48z"/><path fill="#F16529" d="M64 116.8l36.378-10.086 8.559-95.878H64z"/><path fill="#EBEBEB" d="M64 52.455H45.788L44.53 38.361H64V24.599H29.489l.33 3.692 3.382 37.927H64zm0 35.743l-.061.017-15.327-4.14-.979-10.975H33.816l1.928 21.609 28.193 7.826.063-.017z"/><path fill="#fff" d="M63.952 52.455v13.763h16.947l-1.597 17.849-15.35 4.143v14.319l28.215-7.82.207-2.325 3.234-36.233.335-3.696h-3.708zm0-27.856v13.762h33.244l.276-3.092.628-6.978.329-3.692z"/></svg>
-                                <span class="tech-name">HTML5</span>
-                            </div>
-                            <div class="tech-item">
-                                <svg class="tech-svg" viewBox="0 0 128 128"><path fill="#1572B6" d="M18.814 114.123L8.76 1.352h110.48l-10.064 112.754-45.243 12.543-45.119-12.526z"/><path fill="#33A9DC" d="M64.001 117.062l36.559-10.136 8.601-96.354H64.001v106.49z"/><path fill="#fff" d="M64.001 51.429h18.302l1.264-14.163H64.001V23.435h34.682l-.332 3.711-3.4 38.114h-30.95V51.429z"/></svg>
-                                <span class="tech-name">CSS3</span>
-                            </div>
-                            <div class="tech-item">
-                                <svg class="tech-svg" viewBox="0 0 128 128"><path fill="#336791" d="M93.809 92.112c.785-6.533.55-7.492 5.416-6.433l1.235.108c3.742.17 8.637-.602 11.513-1.938 6.191-2.873 9.861-7.668 3.758-6.409-13.924 2.873-14.881-1.842-14.881-1.842 14.703-21.815 20.849-49.508 15.543-56.287C101.696 6.764 78.163.279 78.163.279l-.06.16C75.459.19 72.535.003 69.467.003c-6.737 0-12.057 1.667-16.031 4.562-1.14-.255-2.305-.48-3.515-.663C37.748 1.938 26.033 8.26 16.983 19.468 0 40.06 4.289 72.572 22.536 88.862c5.154 4.488 10.955 6.88 15.989 7.14z"/></svg>
-                                <span class="tech-name">SQL</span>
-                            </div>
-                            <div class="tech-item">
-                                <svg class="tech-svg" viewBox="0 0 128 128"><path fill="#fff" d="M64 5.103c-33.347 0-60.388 27.035-60.388 60.388 0 26.682 17.303 49.317 41.297 57.303 3.017.56 4.125-1.31 4.125-2.905 0-1.44-.056-6.197-.082-11.243-16.8 3.653-20.345-7.125-20.345-7.125-2.747-6.98-6.705-8.836-6.705-8.836-5.48-3.748.413-3.67.413-3.67 6.063.425 9.257 6.223 9.257 6.223 5.386 9.23 14.127 6.562 17.573 5.02.542-3.903 2.107-6.568 3.834-8.076-13.413-1.525-27.514-6.704-27.514-29.843 0-6.593 2.36-11.98 6.223-16.21-.628-1.52-2.695-7.662.584-15.98 0 0 5.07-1.623 16.61 6.19C53.7 35 58.867 34.327 64 34.304c5.13.023 10.3.694 15.127 2.033 11.526-7.813 16.59-6.19 16.59-6.19 3.287 8.317 1.22 14.46.593 15.98 3.872 4.23 6.215 9.617 6.215 16.21 0 23.194-14.127 28.3-27.574 29.796 2.167 1.874 4.097 5.55 4.097 11.183 0 8.08-.07 14.583-.07 16.572 0 1.607 1.088 3.49 4.148 2.897 23.98-7.994 41.263-30.622 41.263-57.294C124.388 32.14 97.35 5.104 64 5.104z"/></svg>
-                                <span class="tech-name">GitHub</span>
-                            </div>
-
                         </div>
+
+                        <!-- Categoria 2: Front-end & UI -->
+                        <div class="tech-category">
+                            <div class="tech-category-title">
+                                <i class="fas fa-laptop-code"></i> Front-end & Web
+                            </div>
+                            <div class="tech-items-grid">
+                                <div class="tech-badge"><i class="fab fa-react" style="color:#61dafb;"></i> React 19</div>
+                                <div class="tech-badge"><i class="fas fa-bolt" style="color:#bd34fe;"></i> Vite</div>
+                                <div class="tech-badge"><i class="fab fa-html5" style="color:#e44d26;"></i> HTML5 Semântico</div>
+                                <div class="tech-badge"><i class="fab fa-css3-alt" style="color:#1572b6;"></i> CSS3 & Tailwind</div>
+                                <div class="tech-badge"><i class="fas fa-universal-access" style="color:#4ade80;"></i> Acessibilidade (WCAG)</div>
+                            </div>
+                        </div>
+
+                        <!-- Categoria 3: Back-end & Banco de Dados -->
+                        <div class="tech-category">
+                            <div class="tech-category-title">
+                                <i class="fas fa-server"></i> Back-end & Dados
+                            </div>
+                            <div class="tech-items-grid">
+                                <div class="tech-badge"><i class="fas fa-bolt" style="color:#3ecf8e;"></i> Supabase</div>
+                                <div class="tech-badge"><i class="fas fa-database" style="color:#336791;"></i> PostgreSQL</div>
+                                <div class="tech-badge"><i class="fas fa-network-wired" style="color:#FA003F;"></i> APIs REST</div>
+                                <div class="tech-badge"><i class="fas fa-file-code" style="color:#94a3b8;"></i> Serialização de Arquivos</div>
+                            </div>
+                        </div>
+
+                        <!-- Categoria 4: Engenharia & Qualidade -->
+                        <div class="tech-category">
+                            <div class="tech-category-title">
+                                <i class="fas fa-vial-circle-check"></i> Qualidade & Ferramentas
+                            </div>
+                            <div class="tech-items-grid">
+                                <div class="tech-badge"><i class="fab fa-git-alt" style="color:#f05032;"></i> Git & GitHub</div>
+                                <div class="tech-badge"><i class="fas fa-feather-pointed" style="color:#c71a36;"></i> Apache Maven</div>
+                                <div class="tech-badge"><i class="fas fa-sitemap" style="color:#a78bfa;"></i> Estruturas de Dados</div>
+                                <div class="tech-badge"><i class="fas fa-check-double" style="color:#4ade80;"></i> QA & Casos de Teste</div>
+                                <div class="tech-badge"><i class="fas fa-cubes" style="color:#60a5fa;"></i> Sistemas ERP</div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
 
             </div>
         </section>
-
 
         <!-- ── CONTATO ── -->
         <section id="contato">
@@ -256,55 +305,58 @@
                 <div class="glass-card contato-card fade-in">
                     <div class="contato-grid">
 
-                        <!-- Info lateral -->
+                        <!-- Informações Diretas -->
                         <div class="contato-info">
                             <p class="contato-intro">
-                                Quer conversar sobre uma oportunidade, projeto ou só bater um papo sobre tecnologia?
-                                Me manda uma mensagem — responderei o mais breve possível.
+                                Estou disponível para oportunidades de <strong>Estágio / Júnior</strong> (Remoto, Híbrido ou Presencial em Passo Fundo e região). Envie uma mensagem e retornarei o mais breve possível!
                             </p>
                             <div class="contato-links">
                                 <a href="mailto:appelt.dev@gmail.com" class="contato-link">
                                     <i class="fas fa-envelope"></i>
                                     <span>appelt.dev@gmail.com</span>
                                 </a>
-                                <a href="https://github.com/luizappelt" class="contato-link" target="_blank">
+                                <a href="https://github.com/LuizAppelt" class="contato-link" target="_blank">
                                     <i class="fab fa-github"></i>
-                                    <span>github.com/luizappelt</span>
+                                    <span>github.com/LuizAppelt</span>
                                 </a>
-                                <a href="https://www.linkedin.com/in/luizappelt/" class="contato-link" target="_blank">
+                                <a href="https://www.linkedin.com/in/luiz-appelt/" class="contato-link" target="_blank">
                                     <i class="fab fa-linkedin"></i>
-                                    <span>linkedin.com/in/luizappelt</span>
+                                    <span>linkedin.com/in/luiz-appelt</span>
                                 </a>
-                                <a href="https://www.instagram.com/luiz.appelt?igsh=MWVyb3RzaGdyMnFwcQ%3D%3D&utm_source=qr" class="contato-link" target="_blank">
+                                <a href="curriculo.pdf" download="Curriculo_Luiz_Henrique_Appelt_Weller.pdf" class="contato-link" target="_blank">
+                                    <i class="fas fa-file-pdf"></i>
+                                    <span>Download do Currículo (PDF)</span>
+                                </a>
+                                <a href="https://www.instagram.com/luiz.appelt" class="contato-link" target="_blank">
                                     <i class="fab fa-instagram"></i>
                                     <span>@luiz.appelt</span>
                                 </a>
                             </div>
                         </div>
 
-                        <!-- Formulário -->
-                        <div class="contato-form-wrapper">
+                        <!-- Formulário Semântico -->
+                        <form id="contato-form" class="contato-form-wrapper" onsubmit="event.preventDefault(); enviarEmail();">
                             <div class="form-group">
                                 <label class="form-label" for="nome">Nome</label>
-                                <input class="form-input" type="text" id="nome" placeholder="Seu nome completo" autocomplete="off">
+                                <input class="form-input" type="text" id="nome" placeholder="Seu nome completo" required autocomplete="name">
                             </div>
                             <div class="form-group">
                                 <label class="form-label" for="email">E-mail</label>
-                                <input class="form-input" type="email" id="email" placeholder="seu@email.com" autocomplete="off">
+                                <input class="form-input" type="email" id="email" placeholder="seu@email.com" required autocomplete="email">
                             </div>
                             <div class="form-group">
                                 <label class="form-label" for="assunto">Assunto</label>
-                                <input class="form-input" type="text" id="assunto" placeholder="Ex: Oportunidade de emprego" autocomplete="off">
+                                <input class="form-input" type="text" id="assunto" placeholder="Ex: Oportunidade de estágio / projeto" autocomplete="off">
                             </div>
                             <div class="form-group">
                                 <label class="form-label" for="mensagem">Mensagem</label>
-                                <textarea class="form-input form-textarea" id="mensagem" placeholder="Escreva sua mensagem aqui..."></textarea>
+                                <textarea class="form-input form-textarea" id="mensagem" placeholder="Escreva sua mensagem aqui..." required></textarea>
                             </div>
-                            <button class="form-btn" id="enviar-btn" onclick="enviarEmail()">
+                            <button type="submit" class="form-btn" id="enviar-btn">
                                 <span id="btn-texto"><i class="fas fa-paper-plane"></i> &nbsp;Enviar mensagem</span>
                             </button>
-                            <p class="form-feedback" id="form-feedback"></p>
-                        </div>
+                            <p class="form-feedback" id="form-feedback" aria-live="polite"></p>
+                        </form>
 
                     </div>
                 </div>
@@ -314,7 +366,7 @@
     </main>
 
     <footer>
-        <p>✦ Luiz Henrique Appelt Weller &nbsp;·&nbsp; Ciências da Computação &nbsp;·&nbsp; <span id="year"></span></p>
+        <p>✦ Luiz Henrique Appelt Weller &nbsp;·&nbsp; Ciência da Computação &nbsp;·&nbsp; <span id="year"></span></p>
     </footer>
 
     <script src="script.js"></script>
