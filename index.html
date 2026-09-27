@@ -88,90 +88,52 @@
 
     <main>
 
-        <!-- ── HERO (LAYOUT ASSIMÉTRICO) ── -->
+        <!-- ── HERO (CENTRALIZADO & EDITORIAL) ── -->
         <section id="hero">
-            <div class="hero-split">
+            <div class="hero-content">
+                <div class="status-pill">
+                    <span class="status-dot"></span>
+                    <span>Disponível para Estágio / Júnior · RS & Remoto</span>
+                </div>
                 
-                <!-- Coluna Esquerda: Apresentação Principal -->
-                <div class="hero-left">
-                    <div class="status-pill">
-                        <span class="status-dot"></span>
-                        <span>Disponível para Estágio / Júnior · RS & Remoto</span>
-                    </div>
-                    
-                    <h1 class="hero-name">
-                        Luiz Henrique <br><span class="hero-name-accent">Appelt Weller</span>
-                    </h1>
-                    
-                    <p class="hero-sub">&lt;Desenvolvedor de Software /&gt;</p>
-                    
-                    <p class="hero-description">
-                        Acadêmico em <strong>Ciência da Computação</strong> na Universidade ATITUS. Combino estruturas de dados sólidas, qualidade de software (QA) e desenvolvimento web moderno para construir sistemas escaláveis e bem projetados.
-                    </p>
-                    
-                    <div class="hero-actions">
-                        <a href="curriculo.pdf" download="Curriculo_Luiz_Henrique_Appelt_Weller.pdf" class="hero-btn-primary" target="_blank">
-                            <i class="fas fa-file-arrow-down"></i> Baixar Currículo
+                <h1 class="hero-name">
+                    Luiz Henrique Appelt Weller
+                </h1>
+                
+                <p class="hero-sub">&lt;Desenvolvedor de Software /&gt;</p>
+                
+                <p class="hero-description">
+                    Acadêmico em <strong>Ciência da Computação</strong> na Universidade ATITUS. Combino estruturas de dados sólidas, qualidade de software (QA) e desenvolvimento web moderno para construir sistemas escaláveis e bem projetados.
+                </p>
+                
+                <div class="hero-actions">
+                    <a href="curriculo.pdf" download="Curriculo_Luiz_Henrique_Appelt_Weller.pdf" class="hero-btn-primary" target="_blank">
+                        <i class="fas fa-file-arrow-down"></i> Baixar Currículo
+                    </a>
+                    <a href="#contato" class="hero-btn-secondary">
+                        <i class="fas fa-paper-plane"></i> Falar comigo
+                    </a>
+                    <div class="hero-social-strip">
+                        <a href="https://github.com/LuizAppelt" class="social-icon-btn" target="_blank" title="GitHub">
+                            <i class="fab fa-github"></i>
                         </a>
-                        <a href="#contato" class="hero-btn-secondary">
-                            <i class="fas fa-paper-plane"></i> Falar comigo
+                        <a href="https://www.linkedin.com/in/luiz-appelt/" class="social-icon-btn" target="_blank" title="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
                         </a>
-                        <div class="hero-social-strip">
-                            <a href="https://github.com/LuizAppelt" class="social-icon-btn" target="_blank" title="GitHub">
-                                <i class="fab fa-github"></i>
-                            </a>
-                            <a href="https://www.linkedin.com/in/luiz-appelt/" class="social-icon-btn" target="_blank" title="LinkedIn">
-                                <i class="fab fa-linkedin"></i>
-                            </a>
-                        </div>
                     </div>
                 </div>
 
-                <!-- Coluna Direita: Card de Perfil & Dev Console -->
-                <div class="hero-right">
-                    <div class="hero-dev-card">
-                        <div class="dev-card-header">
-                            <div class="window-controls">
-                                <span class="ctrl-dot red"></span>
-                                <span class="ctrl-dot yellow"></span>
-                                <span class="ctrl-dot green"></span>
-                            </div>
-                            <span class="dev-card-title">luiz_appelt.profile</span>
-                        </div>
-                        <div class="dev-card-content">
-                            <div class="dev-card-profile">
-                                <div class="avatar-ring">
-                                    <img src="foto.jpg" alt="Luiz Henrique Appelt Weller" width="84" height="84">
-                                    <span class="pulse-indicator" title="Ativo"></span>
-                                </div>
-                                <div class="dev-card-text">
-                                    <h3 class="dev-card-name">Luiz Appelt</h3>
-                                    <p class="dev-card-role">Ciência da Computação · ATITUS</p>
-                                    <p class="dev-card-location"><i class="fas fa-location-dot"></i> Passo Fundo / RS</p>
-                                </div>
-                            </div>
-                            
-                            <div class="dev-stats-grid">
-                                <div class="dev-stat-box">
-                                    <span class="stat-val">2029</span>
-                                    <span class="stat-desc">Formatura</span>
-                                </div>
-                                <div class="dev-stat-box">
-                                    <span class="stat-val">Full-stack & QA</span>
-                                    <span class="stat-desc">Foco Técnico</span>
-                                </div>
-                            </div>
-                            
-                            <div class="dev-tech-pills">
-                                <span class="dev-pill"><i class="fab fa-react" style="color:#61dafb;"></i> React 19</span>
-                                <span class="dev-pill"><i class="fab fa-js-square" style="color:#f7df1e;"></i> TypeScript</span>
-                                <span class="dev-pill"><i class="fab fa-python" style="color:#38bdf8;"></i> Python</span>
-                                <span class="dev-pill"><i class="fab fa-java" style="color:#fb923c;"></i> Java</span>
-                            </div>
-                        </div>
-                    </div>
+                <div class="hero-tech-strip">
+                    <span>TypeScript</span>
+                    <span>·</span>
+                    <span>React 19</span>
+                    <span>·</span>
+                    <span>Python</span>
+                    <span>·</span>
+                    <span>Java</span>
+                    <span>·</span>
+                    <span>QA</span>
                 </div>
-
             </div>
         </section>
 
@@ -181,20 +143,54 @@
                 <p class="section-label fade-in">// 01 — sobre mim</p>
                 <h2 class="section-title fade-in">Quem sou eu</h2>
 
-                <div class="glass-card fade-in">
-                    <div class="sobre-grid">
-                        <div class="foto-wrapper">
-                            <div class="foto-circle">
-                                <img src="foto.jpg" alt="Foto de perfil de Luiz Henrique Appelt Weller" width="180" height="180">
+                <div class="sobre-grid fade-in">
+                    <!-- Coluna Esquerda: Dev Card Interativo -->
+                    <div class="sobre-card-wrapper">
+                        <div class="hero-dev-card">
+                            <div class="dev-card-header">
+                                <div class="window-controls">
+                                    <span class="ctrl-dot red"></span>
+                                    <span class="ctrl-dot yellow"></span>
+                                    <span class="ctrl-dot green"></span>
+                                </div>
+                                <span class="dev-card-title">luiz_appelt.profile</span>
                             </div>
-                            <div class="badges">
-                                <span class="badge">Full-stack</span>
-                                <span class="badge">QA</span>
-                                <span class="badge">Back-end</span>
-                                <span class="badge">Front-end</span>
+                            <div class="dev-card-content">
+                                <div class="dev-card-profile">
+                                    <div class="avatar-ring">
+                                        <img src="foto.jpg" alt="Luiz Henrique Appelt Weller" width="84" height="84">
+                                        <span class="pulse-indicator" title="Ativo"></span>
+                                    </div>
+                                    <div class="dev-card-text">
+                                        <h3 class="dev-card-name">Luiz Appelt</h3>
+                                        <p class="dev-card-role">Ciência da Computação · ATITUS</p>
+                                        <p class="dev-card-location"><i class="fas fa-location-dot"></i> Passo Fundo / RS</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="dev-stats-grid">
+                                    <div class="dev-stat-box">
+                                        <span class="stat-val">2029</span>
+                                        <span class="stat-desc">Formatura</span>
+                                    </div>
+                                    <div class="dev-stat-box">
+                                        <span class="stat-val">Full-stack & QA</span>
+                                        <span class="stat-desc">Foco Técnico</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="dev-tech-pills">
+                                    <span class="dev-pill"><i class="fab fa-react" style="color:#61dafb;"></i> React 19</span>
+                                    <span class="dev-pill"><i class="fab fa-js-square" style="color:#f7df1e;"></i> TypeScript</span>
+                                    <span class="dev-pill"><i class="fab fa-python" style="color:#38bdf8;"></i> Python</span>
+                                    <span class="dev-pill"><i class="fab fa-java" style="color:#fb923c;"></i> Java</span>
+                                </div>
                             </div>
                         </div>
+                    </div>
 
+                    <!-- Coluna Direita: Narrativa Pessoal em Glass Card -->
+                    <div class="glass-card sobre-texto-card">
                         <div class="sobre-texto">
                             <p>
                                 Olá! Sou <strong>Luiz Appelt</strong>, graduando em
