@@ -65,40 +65,113 @@
 </head>
 <body>
 
-    <!-- Textura de estrelas discreta -->
-    <canvas id="fundo-estrelado"></canvas>
-
-    <!-- ── NAVEGAÇÃO ── -->
-    <nav>
-        <a href="#hero" class="nav-logo-kode">&lt;Appelt.dev /&gt;</a>
-        <ul class="nav-links">
-            <li><a href="#sobre">Sobre</a></li>
-            <li><a href="#projetos">Projetos</a></li>
-            <li><a href="#tecnologias">Tecnologias</a></li>
-            <li><a href="#contato">Contato</a></li>
-        </ul>
-    </nav>
+    <!-- ── NAVEGAÇÃO FLUTUANTE ── -->
+    <header class="nav-wrapper">
+        <nav class="floating-nav">
+            <a href="#hero" class="nav-logo-kode">&lt;Appelt.dev /&gt;</a>
+            <ul class="nav-links">
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#tecnologias">Tecnologias</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="curriculo.pdf" download="Curriculo_Luiz_Henrique_Appelt_Weller.pdf" class="nav-cv-btn" target="_blank">
+                    <i class="fas fa-file-pdf"></i> <span>Currículo</span>
+                </a>
+                <button id="theme-toggle" class="theme-toggle-btn" aria-label="Alternar modo claro e escuro" title="Alternar tema">
+                    <i class="fas fa-sun" id="theme-icon"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
 
     <main>
 
-        <!-- ── HERO ── -->
+        <!-- ── HERO (LAYOUT ASSIMÉTRICO) ── -->
         <section id="hero">
-            <div class="hero-content">
-                <span class="hero-tag">✦ Ciência da Computação · ATITUS</span>
-                <h1 class="hero-name">Luiz Henrique Appelt Weller</h1>
-                <p class="hero-sub">&lt;Desenvolvedor de Software /&gt;</p>
-                <div class="hero-socials">
-                    <a href="curriculo.pdf" download="Curriculo_Luiz_Henrique_Appelt_Weller.pdf" class="social-btn primary-btn" target="_blank">
-                        <i class="fas fa-file-arrow-down"></i> Baixar Currículo
-                    </a>
-                    <a href="https://github.com/LuizAppelt" class="social-btn" target="_blank">
-                        <i class="fab fa-github"></i> GitHub
-                    </a>
-                    <a href="https://www.linkedin.com/in/luiz-appelt/" class="social-btn" target="_blank">
-                        <i class="fab fa-linkedin"></i> LinkedIn
-                    </a>
+            <div class="hero-split">
+                
+                <!-- Coluna Esquerda: Apresentação Principal -->
+                <div class="hero-left">
+                    <div class="status-pill">
+                        <span class="status-dot"></span>
+                        <span>Disponível para Estágio / Júnior · RS & Remoto</span>
+                    </div>
+                    
+                    <h1 class="hero-name">
+                        Luiz Henrique <br><span class="hero-name-accent">Appelt Weller</span>
+                    </h1>
+                    
+                    <p class="hero-sub">&lt;Desenvolvedor de Software /&gt;</p>
+                    
+                    <p class="hero-description">
+                        Acadêmico em <strong>Ciência da Computação</strong> na Universidade ATITUS. Combino estruturas de dados sólidas, qualidade de software (QA) e desenvolvimento web moderno para construir sistemas escaláveis e bem projetados.
+                    </p>
+                    
+                    <div class="hero-actions">
+                        <a href="curriculo.pdf" download="Curriculo_Luiz_Henrique_Appelt_Weller.pdf" class="hero-btn-primary" target="_blank">
+                            <i class="fas fa-file-arrow-down"></i> Baixar Currículo
+                        </a>
+                        <a href="#contato" class="hero-btn-secondary">
+                            <i class="fas fa-paper-plane"></i> Falar comigo
+                        </a>
+                        <div class="hero-social-strip">
+                            <a href="https://github.com/LuizAppelt" class="social-icon-btn" target="_blank" title="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/luiz-appelt/" class="social-icon-btn" target="_blank" title="LinkedIn">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                        </div>
+                    </div>
                 </div>
-                <p class="scroll-hint">&nbsp;...</p>
+
+                <!-- Coluna Direita: Card de Perfil & Dev Console -->
+                <div class="hero-right">
+                    <div class="hero-dev-card">
+                        <div class="dev-card-header">
+                            <div class="window-controls">
+                                <span class="ctrl-dot red"></span>
+                                <span class="ctrl-dot yellow"></span>
+                                <span class="ctrl-dot green"></span>
+                            </div>
+                            <span class="dev-card-title">luiz_appelt.profile</span>
+                        </div>
+                        <div class="dev-card-content">
+                            <div class="dev-card-profile">
+                                <div class="avatar-ring">
+                                    <img src="foto.jpg" alt="Luiz Henrique Appelt Weller" width="84" height="84">
+                                    <span class="pulse-indicator" title="Ativo"></span>
+                                </div>
+                                <div class="dev-card-text">
+                                    <h3 class="dev-card-name">Luiz Appelt</h3>
+                                    <p class="dev-card-role">Ciência da Computação · ATITUS</p>
+                                    <p class="dev-card-location"><i class="fas fa-location-dot"></i> Passo Fundo / RS</p>
+                                </div>
+                            </div>
+                            
+                            <div class="dev-stats-grid">
+                                <div class="dev-stat-box">
+                                    <span class="stat-val">2029</span>
+                                    <span class="stat-desc">Formatura</span>
+                                </div>
+                                <div class="dev-stat-box">
+                                    <span class="stat-val">Full-stack & QA</span>
+                                    <span class="stat-desc">Foco Técnico</span>
+                                </div>
+                            </div>
+                            
+                            <div class="dev-tech-pills">
+                                <span class="dev-pill"><i class="fab fa-react" style="color:#61dafb;"></i> React 19</span>
+                                <span class="dev-pill"><i class="fab fa-js-square" style="color:#f7df1e;"></i> TypeScript</span>
+                                <span class="dev-pill"><i class="fab fa-python" style="color:#38bdf8;"></i> Python</span>
+                                <span class="dev-pill"><i class="fab fa-java" style="color:#fb923c;"></i> Java</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </section>
 

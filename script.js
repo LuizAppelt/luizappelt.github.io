@@ -57,6 +57,39 @@ const observer = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
+// ── GERENCIADOR DE TEMA (CLARO / ESCURO) ─────────────────────
+const themeToggleBtn = document.getElementById('theme-toggle');
+const themeIcon      = document.getElementById('theme-icon');
+
+function aplicarTema(tema) {
+    if (tema === 'light') {
+        document.documentElement.setAttribute('data-theme', 'light');
+        if (themeIcon) {
+            themeIcon.className = 'fas fa-moon';
+        }
+    } else {
+        document.documentElement.removeAttribute('data-theme');
+        if (themeIcon) {
+            themeIcon.className = 'fas fa-sun';
+        }
+    }
+}
+
+// Inicialização baseada no localStorage
+const temaSalvo = localStorage.getItem('theme');
+if (temaSalvo) {
+    aplicarTema(temaSalvo);
+}
+
+if (themeToggleBtn) {
+    themeToggleBtn.addEventListener('click', () => {
+        const temaAtual = document.documentElement.getAttribute('data-theme');
+        const novoTema = temaAtual === 'light' ? 'dark' : 'light';
+        aplicarTema(novoTema);
+        localStorage.setItem('theme', novoTema);
+    });
+}
+
 // ── ANO DINÂMICO NO FOOTER ───────────────────────────────────
 const yearEl = document.getElementById('year');
 if (yearEl) {
