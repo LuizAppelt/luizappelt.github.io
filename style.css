@@ -917,10 +917,80 @@ section {
     color: var(--muted);
 }
 
+.contato-status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 14px;
+    border-radius: 100px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--glass-border);
+    font-family: 'Kode Mono', monospace;
+    font-size: 0.74rem;
+    color: var(--muted);
+    margin-bottom: 22px;
+}
+
 .contato-links {
     display: flex;
     flex-direction: column;
     gap: 16px;
+}
+
+.contato-link-copy-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.copy-email-btn {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 8px;
+    color: var(--muted);
+    padding: 6px 10px;
+    font-size: 0.82rem;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.copy-email-btn:hover {
+    color: var(--accent);
+    border-color: var(--accent-border);
+    background: var(--accent-subtle);
+}
+
+.copy-tooltip {
+    position: absolute;
+    bottom: 130%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #0d0f17;
+    color: #FFF9F9;
+    font-family: 'Kode Mono', monospace;
+    font-size: 0.68rem;
+    padding: 3px 8px;
+    border-radius: 6px;
+    border: 1px solid var(--glass-border);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.2s, transform 0.2s;
+    white-space: nowrap;
+    z-index: 10;
+}
+
+.copy-email-btn:hover .copy-tooltip,
+.copy-email-btn.copied .copy-tooltip {
+    opacity: 1;
+}
+
+.copy-email-btn.copied {
+    color: #22c55e;
+    border-color: #22c55e;
 }
 
 .contato-link {
@@ -955,7 +1025,13 @@ section {
 .form-group {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 6px;
+}
+
+.form-label-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .form-label {
@@ -967,6 +1043,17 @@ section {
     font-weight: 700;
 }
 
+.required {
+    color: var(--accent);
+    font-weight: 700;
+}
+
+.char-count {
+    font-family: 'Kode Mono', monospace;
+    font-size: 0.68rem;
+    color: var(--muted);
+}
+
 .form-input {
     background: rgba(255, 255, 255, 0.02);
     border: 1px solid var(--glass-border);
@@ -976,7 +1063,7 @@ section {
     font-family: 'Syne', sans-serif;
     font-size: 0.94rem;
     outline: none;
-    transition: border-color 0.25s, box-shadow 0.25s;
+    transition: border-color 0.25s, box-shadow 0.25s, background-color 0.25s;
     width: 100%;
 }
 
@@ -987,6 +1074,43 @@ section {
 .form-input:focus {
     border-color: var(--accent);
     box-shadow: 0 0 0 3px var(--accent-glow);
+}
+
+.form-input.is-invalid {
+    border-color: #f87171 !important;
+    background: rgba(248, 113, 113, 0.04);
+}
+
+.form-input.is-valid {
+    border-color: #22c55e !important;
+}
+
+.field-hint {
+    font-family: 'Kode Mono', monospace;
+    font-size: 0.72rem;
+    color: #f87171;
+    min-height: 18px;
+    display: none;
+    line-height: 1.4;
+}
+
+.field-hint.active {
+    display: block;
+}
+
+.field-hint.suggestion-hint {
+    color: #38bdf8;
+}
+
+.suggestion-link {
+    color: #38bdf8;
+    text-decoration: underline;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.suggestion-link:hover {
+    color: #7dd3fc;
 }
 
 .form-textarea {
@@ -1153,6 +1277,42 @@ footer {
 [data-theme="light"] .form-input:focus {
     border-color: var(--accent);
     box-shadow: 0 0 0 3px rgba(250, 0, 63, 0.12);
+}
+
+[data-theme="light"] .contato-status-badge {
+    background: rgba(255, 245, 246, 0.85);
+    border-color: rgba(0, 0, 0, 0.08);
+    color: #756366;
+}
+
+[data-theme="light"] .copy-email-btn {
+    background: rgba(255, 245, 246, 0.85);
+    border-color: rgba(0, 0, 0, 0.08);
+    color: #756366;
+}
+
+[data-theme="light"] .copy-email-btn:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+    background: var(--accent-subtle);
+}
+
+[data-theme="light"] .copy-tooltip {
+    background: #140f10;
+    color: #FFF9F9;
+}
+
+[data-theme="light"] .form-input.is-invalid {
+    border-color: #ef4444 !important;
+    background: rgba(239, 68, 68, 0.04);
+}
+
+[data-theme="light"] .form-input.is-valid {
+    border-color: #22c55e !important;
+}
+
+[data-theme="light"] .char-count {
+    color: #756366;
 }
 
 /* ─── RESPONSIVIDADE ────────────────────────────────────────── */
